@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Emoji</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hey! I'm Smiley</h1>
+      <br>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-6">
+          <button id="btn1">Make me Happy</button>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <button id="btn2">Make me Sad</button>
+        </div>
+      </div>
+
+      <div class="img-fluid justify-content-center"><img src="img/think.png" height="250" width="250"></div>
+      <br>
+      <h3><br></h3>
+
+      <div class="row circles">
+        <div class="col col-sm circle" id="turquoise" data-color="turquoise"></div>
+        <div class="col col-sm circle" id="maroon" data-color="maroon"></div>
+        <div class="col col-sm circle" id="peru" data-color="peru"></div>
+        <div class="col col-sm circle" id="crimson" data-color="crimson"></div>
+        <div class="col col-sm circle" id="violet" data-color="violet"></div>
+        <div class="col col-sm circle" id="green" data-color="green"></div>
+      </div>
+    </div>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+
+          $(document).ready(function(){
+
+            $(".circle").click(function(){
+              var colour= $(this).attr("data-color");
+              $("body").css("background",colour);
+            })
+
+            $("#btn1").click(function(){
+              $("img").attr("src","img/happy.png");
+              $("h3").html("You made me happy");
+            })
+
+            $("#btn2").click(function(){
+              $("img").attr("src","img/sad.png");
+              $("h3").html("You made me sad");
+            })
+
+          });
+
+          
+        </script>
+
+  </body>
+</html>
